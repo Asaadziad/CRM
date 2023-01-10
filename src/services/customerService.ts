@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 import Customer from "../interfaces/Customer";
-const CUSTOMERS_API = "http://localhost:8000/customers";
+const CUSTOMERS_API = process.env.REACT_APP_CUSTOMERS_API as string;
 
 //@desc get all customers
 //GET api/customers
