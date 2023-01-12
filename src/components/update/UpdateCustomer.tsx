@@ -59,6 +59,7 @@ const UpdateCustomer: FunctionComponent<UpdateCustomerProps> = () => {
               className="form-control"
               id="firstName"
               name="firstName"
+              value={formik.values.firstName}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
@@ -73,7 +74,7 @@ const UpdateCustomer: FunctionComponent<UpdateCustomerProps> = () => {
               className="form-control"
               id="lastName"
               name="lastName"
-              value={formik.initialValues.lastName}
+              value={formik.values.lastName}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
@@ -88,6 +89,7 @@ const UpdateCustomer: FunctionComponent<UpdateCustomerProps> = () => {
               className="form-control"
               id="email"
               name="email"
+              value={formik.values.email}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
@@ -103,6 +105,7 @@ const UpdateCustomer: FunctionComponent<UpdateCustomerProps> = () => {
               className="form-control"
               id="phone"
               name="phone"
+              value={formik.values.phone}
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
@@ -110,7 +113,11 @@ const UpdateCustomer: FunctionComponent<UpdateCustomerProps> = () => {
               <p className="text-danger">{formik.errors.phone}</p>
             )}
           </div>
-          <button type="submit" className="btn btn-warning w-100 mt-5">
+          <button
+            type="submit"
+            className="btn btn-warning w-100 mt-5"
+            disabled={!formik.isValid || !formik.dirty}
+          >
             Update
           </button>
         </form>

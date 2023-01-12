@@ -1,11 +1,25 @@
 {
   "customers": [
     {
-      "firstName": "testdgsgdsdgdgssdgsgsd",
+      "firstName": "fasfassaddfda",
       "lastName": "gdgdds",
-      "email": "asaad_asaad2011@hotmail.com",
+      "email": "sfafsa@gmail.com",
       "phone": "0508840777",
       "id": 2
+    },
+    {
+      "firstName": "test",
+      "lastName": "gs",
+      "email": "fgfggd@gmail.com",
+      "phone": "0508840777",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username": "asaad",
+      "email": "asaadabuelhija@gmail.com",
+      "password": "1234567891"
     }
   ]
 }

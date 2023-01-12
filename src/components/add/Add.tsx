@@ -92,7 +92,11 @@ const Add: FunctionComponent<AddProps> = () => {
             <p className="text-danger">{formik.errors.phone}</p>
           )}
         </div>
-        <button type="submit" className="btn btn-primary w-100 mt-5">
+        <button
+          type="submit"
+          className="btn btn-primary w-100 mt-5"
+          disabled={!formik.isValid || !formik.dirty}
+        >
           Add
         </button>
       </form>
